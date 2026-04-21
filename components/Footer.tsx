@@ -1,3 +1,4 @@
+import { Instagram, Linkedin, Twitter } from "./BrandIcons";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { siteConfig } from "@/lib/config";
@@ -13,15 +14,22 @@ export default function Footer() {
           </div>
           
           <div className={styles.links}>
+            <Link href="/" className={styles.link}>Home</Link>
             <Link href="/work" className={styles.link}>Work</Link>
             <Link href="/press" className={styles.link}>Press</Link>
             <Link href="/contact" className={styles.link}>Contact</Link>
           </div>
 
           <div className={styles.socials}>
-            <Link href="#" className={styles.socialLink}>IG</Link>
-            <Link href="#" className={styles.socialLink}>LI</Link>
-            <Link href="#" className={styles.socialLink}>PI</Link>
+            <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Instagram">
+              <Instagram size={20} />
+            </a>
+            <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
+              <Linkedin size={20} />
+            </a>
+            <a href={siteConfig.socials.twitter} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Twitter">
+              <Twitter size={20} />
+            </a>
           </div>
         </div>
 

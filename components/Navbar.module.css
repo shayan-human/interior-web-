@@ -144,6 +144,42 @@
   margin-top: 24px;
 }
 
+.navSocials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+  border-right: 1px solid var(--border-subtle);
+  margin-right: -16px; /* Offset for better spacing with Book Button */
+}
+
+.socialIcon {
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.socialIcon:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.mobileSocials {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.mobileSocialIcon {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.mobileSocialIcon:hover {
+  color: var(--gold);
+}
+
 @media (max-width: 768px) {
   .desktopNav {
     display: none;

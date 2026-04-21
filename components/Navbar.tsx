@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { Instagram, Linkedin, Twitter } from "./BrandIcons";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Navbar.module.css";
 
 import { siteConfig } from "@/lib/config";
 
 const navLinks = [
+  { name: "Home", href: "/" },
   { name: "Work", href: "/work" },
   { name: "About", href: "/about" },
   { name: "Press", href: "/press" },
@@ -53,6 +55,14 @@ export default function Navbar() {
                 </Link>
               );
             })}
+            <div className={styles.navSocials}>
+              <a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
+                <Instagram size={18} />
+              </a>
+              <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn">
+                <Linkedin size={18} />
+              </a>
+            </div>
             <Link href="/contact" className={styles.bookButton}>
               Book a Call &rarr;
             </Link>
@@ -94,6 +104,19 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              
+              <div className={styles.mobileSocials}>
+                <a href={siteConfig.socials.instagram} className={styles.mobileSocialIcon}>
+                  <Instagram size={24} />
+                </a>
+                <a href={siteConfig.socials.linkedin} className={styles.mobileSocialIcon}>
+                  <Linkedin size={24} />
+                </a>
+                <a href={siteConfig.socials.twitter} className={styles.mobileSocialIcon}>
+                  <Twitter size={24} />
+                </a>
+              </div>
+
               <Link
                 href="/contact"
                 className={styles.mobileBookButton}

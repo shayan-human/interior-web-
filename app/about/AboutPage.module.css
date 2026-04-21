@@ -96,6 +96,12 @@
   background: var(--background);
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 24px;
+  }
+}
+
 .philosophy {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -130,6 +136,12 @@
 
 .process {
   margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .process {
+    margin-top: 80px;
+  }
 }
 
 .processGrid {
@@ -175,18 +187,66 @@
 }
 
 @media (max-width: 968px) {
-  .heroFrame {
-    width: 80vw;
-    height: 50vh;
+  .heroSticky {
+    height: 150vh; /* Reduced from 200vh for snappier mobile feel */
   }
+
+  .heroFrame {
+    width: 85vw;
+    height: 60vh;
+    padding: 24px;
+  }
+
+  .heroImageWrapper {
+    top: -20px;
+    right: -20px;
+  }
+
   .bgText {
+    font-size: 20vw;
+    color: rgba(255, 255, 255, 0.05); /* Slightly more visible on small screens */
+  }
+
+  .mainTitle {
     font-size: 15vw;
   }
+
   .philosophy {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
+
+  .philosophyText {
+    font-size: 1.75rem;
+  }
+
+  .philosophyDetail {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   .processGrid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .processCard {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroFrame {
+    width: 90vw;
+    padding: 20px;
+  }
+  
+  .mainTitle {
+    font-size: 18vw;
+  }
+
+  .heroImageWrapper {
+    top: -15px;
+    right: -15px;
   }
 }
