@@ -1,0 +1,120 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 180px 5% 120px;
+}
+
+.header {
+  max-width: 1400px;
+  margin: 0 auto 100px;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: grayscale(1);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+  filter: grayscale(0.5);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.publication {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.articleTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.card:hover .articleTitle {
+  color: var(--gold);
+}
+
+.date {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.link {
+  margin-top: 16px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.8;
+}
+
+.link:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

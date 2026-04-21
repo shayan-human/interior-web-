@@ -1,0 +1,92 @@
+:root {
+  /* Backgrounds */
+  --bg-void: #000000;
+  --bg-dark: #0D0D0D;
+  --bg-elevated: #141414;
+  --bg-light: #F5F2EE;       /* editorial white sections */
+
+  /* Gold Accent */
+  --gold: #C9A84C;
+  --gold-light: #E8D5A3;
+  --gold-muted: #8A6F32;
+
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-muted: #606060;
+  --text-dark: #1A1A1A;      /* for light sections */
+
+  /* Borders */
+  --border-gold: rgba(201, 168, 76, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Overlays */
+  --overlay-dark: rgba(0, 0, 0, 0.7);
+  --overlay-mid: rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-void);
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--gold);
+  color: #000;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* --- OVERHAUL AESTHETICS --- */
+
+/* Hide default cursor only on devices with a real mouse/trackpad */
+@media (pointer: fine) {
+  body, a, button, input, textarea, select {
+    cursor: none;
+  }
+}
+
+/* Global grain noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035; /* Subtle grain */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Masking utility for cinematic text reveals */
+.mask-line {
+  overflow: hidden;
+  display: block; /* or inline-block based on context */
+}
