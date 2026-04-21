@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, Variants } from 'framer-motion';
 import Image from 'next/image';
 import styles from './AboutPage.module.css';
 import { siteConfig } from '@/lib/config';
@@ -20,12 +20,12 @@ export default function AboutPage() {
   const frameY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
   const opacityFade = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  const fadeInUp = {
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.25, 0.46, 0.45, 0.94] } }
   };
 
-  const stagger = {
+  const stagger: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,

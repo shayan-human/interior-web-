@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import GoldDivider from "./GoldDivider";
@@ -8,7 +8,7 @@ import styles from "./HeroSection.module.css";
 import { siteConfig } from "@/lib/config";
 
 export default function HeroSection() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,14 +16,14 @@ export default function HeroSection() {
     },
   };
 
-  const maskVariants = {
+  const maskVariants: Variants = {
     hidden: { y: "110%" },
-    visible: { y: "0%", transition: { duration: 1.2, ease: "easeOut" as const } },
+    visible: { y: "0%", transition: { duration: 1.2, ease: "easeOut" } },
   };
 
-  const fadeVariants = {
+  const fadeVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: "easeOut" as const } },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: "easeOut" } },
   };
 
   return (
