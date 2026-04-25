@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd lumiere-studio && npm run build",
+  "outputDirectory": "lumiere-studio/.next",
+  "installCommand": "cd lumiere-studio && npm install",
+  "framework": "nextjs"
+}

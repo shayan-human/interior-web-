@@ -1,0 +1,9 @@
+{
+  "name": "interior-designer-web-root",
+  "private": true,
+  "scripts": {
+    "build": "cd lumiere-studio && npm run build",
+    "vercel-build": "cd lumiere-studio && npm install && npm run build",
+    "install": "cd lumiere-studio && npm install"
+  }
+}
