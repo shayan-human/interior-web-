@@ -1,0 +1,116 @@
+.main {
+  padding: 120px 24px 80px;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 160px 48px 80px;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    text-align: left;
+    margin-bottom: 96px;
+  }
+}
+
+.label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--text-100);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 72px;
+  }
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text-65);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .body {
+    margin: 0;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 1024px) {
+  .filters {
+    justify-content: flex-start;
+  }
+}
+
+.filterBtn {
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  color: var(--text-65);
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  border-color: var(--glass-border-hi);
+  color: var(--text-100);
+}
+
+.filterActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

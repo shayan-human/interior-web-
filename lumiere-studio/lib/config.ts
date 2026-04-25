@@ -14,5 +14,10 @@ export const siteConfig = {
     instagram: "https://instagram.com",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
+    whatsapp: "https://wa.me/917003787115", // Replace with actual number
   },
+  reviewLink: "https://g.page/r/CSyMlVoelo9cEBM/review",
 };
+
+
+

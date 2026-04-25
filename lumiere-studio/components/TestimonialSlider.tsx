@@ -22,6 +22,21 @@ export default function TestimonialSlider() {
       id: 3,
       quote: "Flawless execution, extraordinary vision. Our hotel lobby stopped guests in their tracks.",
       author: "SOFIA V., MILAN"
+    },
+    {
+      id: 4,
+      quote: "Minimalism at its finest. They turned our cramped apartment into a sanctuary of light and space.",
+      author: "ELENA K., LONDON"
+    },
+    {
+      id: 5,
+      quote: "The project management was as impeccable as the design. A truly stress-free transformation.",
+      author: "MARCUS T., SINGAPORE"
+    },
+    {
+      id: 6,
+      quote: "Their use of natural materials and bespoke lighting created an atmosphere of pure luxury.",
+      author: "AMARA O., LAGOS"
     }
   ];
 

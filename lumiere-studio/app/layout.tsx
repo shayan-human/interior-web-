@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 };
 
+import FloatingActions from "@/components/FloatingActions";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,6 +46,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingActions />
         <div className="noise-overlay" />
       </body>
     </html>
